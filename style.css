@@ -297,6 +297,13 @@ section {
   background: var(--white);
 }
 
+.que-es .container .logo, .beneficios .container .logo {
+  height:30px; 
+  width:auto; 
+  margin-bottom:16px;
+  max-width: 100%;
+}
+
 .que-es-grid {
   display:grid;
   grid-template-columns: 1fr 1fr;
