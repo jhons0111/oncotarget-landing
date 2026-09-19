@@ -240,6 +240,7 @@ a {
   font-weight:600;
   font-size:0.98rem;
   transition: background .15s ease;
+  max-width: 250px;
 }
 
 .btn-secondary:hover {
