@@ -71,9 +71,12 @@ a {
 
 .nav .container {
   display:flex;
+  align-items:center;
   justify-content:space-between;
   gap:14px;
-  height: 72px;
+  min-height: 72px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .nav-menu {
@@ -87,7 +90,7 @@ a {
 
 .nav-menu a {
   text-decoration:none;
-  color:#e9ecef;
+  color:var(--navy);
   font-size:0.72rem;
   font-weight:800;
   letter-spacing:0.12em;
@@ -97,8 +100,40 @@ a {
   border:1px solid rgba(38,54,74,0.18);
   background: rgba(255,255,255,0.35);
   transition: transform .15s ease, background .15s ease;
-  height: 40px;
-  overflow: hidden;
+  display:flex;
+  align-items:center;
+  min-height: 40px;
+  white-space: nowrap;
+}
+
+.nav-menu a:hover {
+  background: var(--peach);
+}
+
+.nav a:focus-visible, .nav-toggle:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 4px;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(38,54,74,0.18);
+  border-radius: 10px;
+  background: var(--cream);
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 20px;
+  height: 2px;
+  background: currentColor;
 }
 
 .brand {
@@ -118,8 +153,7 @@ a {
 }
 
 .logo-img {
-  height:110px;
-  min-width: 230px;
+  height:56px;
   width:auto;
   display:block;
 }
@@ -165,6 +199,12 @@ a {
 }
 
 .nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 44px;
+  text-align: center;
   background: var(--navy);
   color:var(--white);
   padding: 10px 22px;
@@ -756,6 +796,51 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 860px) {
+  .nav .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .nav .brand {
+    min-width: 0;
+  }
+
+  .nav .logo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 56px;
+    object-fit: contain;
+  }
+
+  .nav-toggle:not([hidden]) {
+    display: flex;
+  }
+
+  .nav-cta {
+    grid-column: 1 / -1;
+    max-width: none;
+    white-space: normal;
+  }
+
+  .nav-menu {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+  }
+
+  .nav-menu[hidden] {
+    display: none;
+  }
+
+  .nav-menu a {
+    min-height: 44px;
+    white-space: normal;
+  }
+
   .que-es-grid {
     grid-template-columns: 1fr;
   }
