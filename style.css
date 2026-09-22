@@ -899,3 +899,175 @@ footer {
   }
 
 }
+
+/* ===== EXPLORADOR RÁPIDO ===== */
+.quick-explorer-tab {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 90;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  padding: 18px 12px;
+  border: 0;
+  border-radius: 12px 0 0 12px;
+  background: var(--coral);
+  color: var(--white);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(38, 54, 74, 0.2);
+}
+
+.quick-explorer-tab:focus-visible,
+.technical-drawer-close:focus-visible,
+.drawer-download:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+.technical-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(38, 54, 74, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+
+.technical-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 110;
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: -18px 0 42px rgba(38, 54, 74, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.32s ease;
+}
+
+.technical-drawer.is-open {
+  transform: translateX(0);
+}
+
+.technical-drawer-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.technical-drawer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 32px 28px 24px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.technical-drawer-kicker,
+.drawer-section-label {
+  margin-bottom: 8px;
+  color: var(--coral);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.technical-drawer-header h2 {
+  color: var(--white);
+  font-size: 4rem;
+  line-height: 0.45;
+}
+
+.drawer-section-label {
+  font-size: 0.45rem;
+}
+
+.technical-drawer-close {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.technical-drawer-content {
+  padding: 28px;
+}
+
+.drawer-section {
+  padding: 0 0 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(38, 54, 74, 0.1);
+}
+
+.biomarker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.biomarker-grid span {
+  padding: 12px;
+  border: 1px solid rgba(227, 111, 60, 0.3);
+  border-radius: 8px;
+  background: var(--peach);
+  color: var(--navy);
+  font-weight: 800;
+  text-align: center;
+}
+
+.drawer-details {
+  display: grid;
+  gap: 18px;
+}
+
+.drawer-details strong,
+.drawer-detail-label {
+  display: block;
+}
+
+.drawer-detail-label {
+  margin-bottom: 3px;
+  color: var(--navy-light);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.drawer-details strong {
+  font-size: 0.98rem;
+}
+
+.accreditation-list {
+  padding-left: 20px;
+  color: var(--navy-light);
+}
+
+.accreditation-list li + li {
+  margin-top: 12px;
+}
+
+.drawer-download {
+  display: block;
+  margin: auto 28px 28px;
+  padding: 15px 20px;
+  border-radius: 100px;
+  background: var(--coral);
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+}

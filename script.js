@@ -2,6 +2,9 @@ const navigation = document.querySelector('.nav');
 const menuToggle = navigation.querySelector('.nav-toggle');
 const menu = document.getElementById('nav-menu');
 const mobileLayout = window.matchMedia('(max-width: 860px)');
+const quickExplorerTab = document.querySelector('.quick-explorer-tab');
+const technicalDrawer = document.querySelector('.technical-drawer');
+const technicalDrawerOverlay = document.querySelector('.technical-drawer-overlay');
 
 function setMenuOpen(open, restoreFocus = false) {
   menuToggle.setAttribute('aria-expanded', String(open));
@@ -44,3 +47,8 @@ navigation.addEventListener('focusout', (event) => {
 
 mobileLayout.addEventListener('change', syncLayout);
 syncLayout();
+
+quickExplorerTab.addEventListener('click', () => {
+  technicalDrawer.classList.add('is-open');
+  technicalDrawerOverlay.classList.add('is-open');
+});

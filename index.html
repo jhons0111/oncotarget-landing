@@ -250,5 +250,61 @@
       </div>
     </footer>
 
+    <button class="quick-explorer-tab" type="button" aria-controls="technical-drawer">
+      📊 Ficha Técnica / Biomarcadores
+    </button>
+
+    <div class="technical-drawer-overlay" aria-hidden="true"></div>
+
+    <aside class="technical-drawer" id="technical-drawer" aria-labelledby="technical-drawer-title">
+      <div class="technical-drawer-header">
+        <div>
+          <p class="technical-drawer-kicker">Explorador Rápido</p>
+          <h2 id="technical-drawer-title">Ficha Técnica Oncotarget</h2>
+        </div>
+        <button class="technical-drawer-close" type="button" aria-label="Cerrar ficha técnica">✕</button>
+      </div>
+
+      <div class="technical-drawer-content">
+        <section class="drawer-section">
+          <p class="drawer-section-label">Biomarcadores destacados</p>
+          <div class="biomarker-grid">
+            <span>EGFR</span>
+            <span>KRAS</span>
+            <span>BRAF</span>
+            <span>ALK</span>
+            <span>ROS1</span>
+            <span>PD-L1</span>
+          </div>
+        </section>
+
+        <section class="drawer-section drawer-details">
+          <div>
+            <span class="drawer-detail-label">Metodología</span>
+            <strong>Secuenciación NGS</strong>
+          </div>
+          <div>
+            <span class="drawer-detail-label">Tiempo de entrega</span>
+            <strong>~15 días hábiles</strong>
+          </div>
+          <div>
+            <span class="drawer-detail-label">Muestras</span>
+            <strong>Tejido FFPE y biopsia líquida</strong>
+          </div>
+        </section>
+
+        <section class="drawer-section">
+          <p class="drawer-section-label">Acreditaciones de laboratorio</p>
+          <ul class="accreditation-list">
+            <li>Laboratorio especializado en genética oncológica</li>
+            <li>Controles de calidad para análisis molecular</li>
+            <li>Interpretación clínica de variantes accionables</li>
+          </ul>
+        </section>
+      </div>
+
+      <a class="drawer-download" href="#contacto">Descargar protocolo completo</a>
+    </aside>
+
   </body>
 </html>
